@@ -134,20 +134,25 @@ class ReduxModal extends Component{
                                         <div className="modal-footer">
                                             {o.type === 'yes-no' ?
                                                 <span>
-                                                <span className="modal-error" title={rm.error}>{rm.error}</span>
-                                               <button className="btn btn-success"
-                                                       title={o.titleYes}
-                                                       onClick={this.handleClickYes}>{o.captionYes ? o.captionYes : 'Да'}</button>
-                                               <button className="btn btn-default"
-                                                       title={o.titleNo}
-                                                       onClick={this.handleClickNo}>{o.captionNo ? o.captionNo : 'Нет'}
-                                               </button>
-                                            </span> :
-                                                <button type="button"
-                                                        className={'btn btn-default' + (o.type === 'error' ? ' error' : '')}
-                                                        onClick={this.handleClose}
-                                                        data-dismiss="modal">{o.titleClose ? o.titleClose : 'Закрыть'}
-                                                </button>
+                                                    <span className="modal-error" title={rm.error}>{rm.error}</span>
+                                                   <button className="btn btn-success"
+                                                           title={o.titleYes}
+                                                           onClick={this.handleClickYes}>{o.captionYes ? o.captionYes : 'Да'}</button>
+                                                   <button className="btn btn-default"
+                                                           title={o.titleNo}
+                                                           onClick={this.handleClickNo}>{o.captionNo ? o.captionNo : 'Нет'}
+                                                   </button>
+                                                </span> :
+                                                <span>
+                                                    <span className="modal-error" title={rm.error}>{rm.error}</span>
+
+                                                    <button type="button"
+                                                            className={'btn btn-default' + (o.type === 'error' ? ' error' : '')}
+                                                            onClick={this.handleClose}
+                                                            data-dismiss="modal">{o.titleClose ? o.titleClose : 'Закрыть'}
+                                                    </button>
+                                                </span>
+
                                             }
                                         </div>
                                     }
